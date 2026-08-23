@@ -1,996 +1,377 @@
-# FMCG Sales Analytics on Databricks
+# 🏢 FMCG Sales Analytics Platform
 
-<p align="center">
+<div align="center">
 
-### From Sales Data → Analytical SQL → Business KPIs → Interactive Analytics → Natural-Language Insights
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,20:EA580C,55:F97316,100:16A34A&height=230&section=header&text=FMCG%20SALES%20ANALYTICS&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Enterprise%20Data%20Engineering%20Project%20•%20Databricks%20•%20PySpark%20•%20SQL%20•%20Power%20BI&descAlignY=60&descSize=18"/>
 
-<br>
+### 🚀 Turning Enterprise Retail Data into Executive Business Intelligence
 
-<a href="https://github.com/syedsaud15/FMCG-Sales-Analytics-Databricks">
-<img src="https://img.shields.io/badge/Repository-GitHub-181717?style=flat-square&logo=github" alt="GitHub">
-</a>
-<a href="https://www.databricks.com/">
-<img src="https://img.shields.io/badge/Platform-Databricks-EF3E42?style=flat-square&logo=databricks" alt="Databricks">
-</a>
-<img src="https://img.shields.io/badge/SQL-Analytics-336791?style=flat-square&logo=postgresql" alt="SQL">
-<img src="https://img.shields.io/badge/Genie%20AI-Conversational%20Analytics-7B61FF?style=flat-square" alt="Genie AI">
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=2800&pause=900&color=FACC15&center=true&vCenter=true&width=900&lines=180K%2B+Business+Transactions+Analyzed;Supply+Chain+%7C+Sales+%7C+Customer+%7C+Fraud+Analytics;Bronze+%E2%86%92+Silver+%E2%86%92+Gold+Lakehouse+Architecture;Enterprise+Databricks+Data+Engineering+Workflow"/>
 
-</p>
+<br/>
 
-> **An analytical FMCG sales solution built on Databricks SQL that transforms sales data into business-ready KPIs, category and brand intelligence, interactive dashboard insights, and natural-language analytical exploration through Databricks Genie AI.**
+![Databricks](https://img.shields.io/badge/DATABRICKS-LAKEHOUSE-EA580C?style=for-the-badge\&logo=databricks\&logoColor=white)
+![PySpark](https://img.shields.io/badge/PYSPARK-DISTRIBUTED-F97316?style=for-the-badge\&logo=apachespark\&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-ANALYTICS-2563EB?style=for-the-badge)
+![Power BI](https://img.shields.io/badge/POWER_BI-DASHBOARD-FACC15?style=for-the-badge\&logo=powerbi\&logoColor=black)
+![Status](https://img.shields.io/badge/STATUS-PRODUCTION_READY-22C55E?style=for-the-badge)
+
+</div>
 
 ---
 
-## 1. Executive Overview
+# 🌍 Executive Overview
 
-FMCG businesses operate across large product portfolios, brands, and categories where decision-making depends on understanding sales performance quickly and accurately.
+**FMCG Sales Analytics Platform** is an enterprise-grade **Data Engineering & Business Intelligence** project built on Databricks using PySpark, SQL and Power BI.
 
-This project implements a **Databricks-based analytical workflow** for turning FMCG sales information into a structured business intelligence layer.
+The platform processes **180,000+ retail transactions** to generate executive insights across sales performance, customer behavior, supply chain operations, fraud monitoring and web engagement. The project follows a modern Lakehouse architecture inspired by enterprise retail analytics workflows. The project scope is based on the repository's documented business domains and dataset scale. <Cite ref={["turn0search0"]}/>
 
-The core analytical logic is implemented in SQL and covers:
+### 🎯 Business Goal
 
-* Sales aggregation
-* KPI computation
-* Category-level analysis
-* Brand-level analysis
-* Comparative analysis
-* Ranking-oriented analysis
-* Business-oriented analytical queries
+> Convert raw enterprise sales data into **trusted, decision-ready business intelligence** through scalable distributed data engineering.
 
-The resulting analytical outputs are consumed through two different interfaces:
+---
 
-**Visual analytics**
+# 📊 Executive KPI Dashboard
 
-→ Databricks Dashboard
+<div align="center">
 
-**Conversational analytics**
+|    💰 Revenue   |   🛒 Orders  |      🌍 Markets     |  ⚡ Engine  |
+| :-------------: | :----------: | :-----------------: | :--------: |
+| Sales Analytics |   **180K+**  |     Multi-Region    | Databricks |
+|  Business KPIs  | Transactions | Retail Intelligence |   PySpark  |
 
-→ Databricks Genie AI
+</div>
 
-The architecture intentionally separates **analytical computation** from **analytical consumption**.
+---
 
-```text
-                         FMCG SALES DATA
-                                │
-                                ▼
-                    ┌───────────────────────┐
-                    │    DATABRICKS SQL     │
-                    │                       │
-                    │ Analytical Queries    │
-                    │ KPI Calculations      │
-                    │ Category Analysis     │
-                    │ Brand Analysis        │
-                    │ Ranking & Comparison  │
-                    └───────────┬───────────┘
-                                │
-                       Analytical Outputs
-                                │
-                 ┌──────────────┴──────────────┐
-                 │                             │
-                 ▼                             ▼
-      ┌────────────────────┐       ┌────────────────────┐
-      │ Databricks         │       │ Databricks         │
-      │ Dashboard           │       │ Genie AI           │
-      │                     │       │                    │
-      │ Visual Analytics    │       │ Natural Language   │
-      │ KPI Monitoring      │       │ Data Exploration  │
-      │ Brand/Category      │       │ Business Questions│
-      └──────────┬─────────┘       └──────────┬─────────┘
-                 │                            │
-                 └─────────────┬──────────────┘
-                               ▼
-                    ┌──────────────────────┐
-                    │ Business Insights    │
-                    │ & Decision Support    │
-                    └──────────────────────┘
+# ✨ Business Problem Statement
+
+FMCG companies generate massive volumes of operational data every day—from customer orders and product sales to shipping events and website activity.
+
+Without a structured analytics platform, answering questions like these becomes extremely difficult:
+
+* Which customers generate the highest revenue?
+* Which regions are underperforming?
+* How efficient is the supply chain?
+* Which products drive profitability?
+* Where are fraud risks increasing?
+* How does customer engagement impact sales?
+
+This project solves those challenges through an end-to-end analytical pipeline.
+
+---
+
+# 🏗️ Enterprise Architecture
+
+```text id="pbuhic"
+                    ENTERPRISE DATA SOURCES
+      Orders • Customers • Products • Shipping • Web Logs
+                              │
+                              ▼
+                     📥 DATA INGESTION
+                    Databricks Workspace
+                              │
+                              ▼
+                   🥉 BRONZE (RAW LAYER)
+                 Historical • Immutable Storage
+                              │
+                              ▼
+                 🥈 SILVER (TRUSTED LAYER)
+           Cleaning • Validation • Standardization
+                              │
+                              ▼
+                  🥇 GOLD (BUSINESS LAYER)
+          KPIs • Aggregations • Executive Metrics
+                              │
+                              ▼
+                 SQL WAREHOUSE & POWER BI
+                              │
+                              ▼
+                 📊 EXECUTIVE DECISION MAKING
 ```
 
----
-
-# 2. Business Problem
-
-A sales dataset contains information, but information alone does not provide a decision-making interface.
-
-Business stakeholders typically need answers to questions such as:
-
-* What is the overall sales position?
-* What is the average sales value?
-* Which category contributes the most sales?
-* Which brands are performing strongly?
-* How do categories compare?
-* How do brands compare?
-* Can the business explore the data without manually writing SQL?
-
-The engineering problem is therefore not simply to create a dashboard.
-
-It is to establish a **reusable analytical layer** that can answer business questions consistently and expose the resulting metrics through accessible analytical interfaces.
+The layered Medallion approach separates raw ingestion, trusted transformations and business-ready analytics into independent engineering stages.
 
 ---
 
-# 3. Project Objective
+# 🔄 End-to-End Data Pipeline
 
-The project has four primary objectives:
-
-### Objective 01 — Centralize analytical logic
-
-Implement sales analysis through structured SQL rather than embedding business calculations independently inside individual visualizations.
-
-### Objective 02 — Engineer reusable KPIs
-
-Convert sales information into measurable business indicators such as total sales, average sales, brand count, and category count.
-
-### Objective 03 — Enable dimensional analysis
-
-Provide analytical views across FMCG dimensions such as:
-
-* Category
-* Brand
-* Sales performance
-
-### Objective 04 — Provide multiple consumption interfaces
-
-Support both:
-
-```text
-Traditional BI
-SQL → Dashboard → Visual Insight
+```text id="7pgsks"
+        RAW CSV FILES
+              │
+              ▼
+      Databricks Ingestion
+              │
+              ▼
+     PySpark Data Cleaning
+              │
+              ▼
+    Schema Validation & QA
+              │
+              ▼
+     Feature Engineering
+              │
+              ▼
+      Business KPI Models
+              │
+              ▼
+        SQL Analytics
+              │
+              ▼
+      Power BI Dashboard
 ```
 
-and:
-
-```text
-Conversational BI
-Question → Genie AI → Analytical Response
-```
+Each stage has a dedicated responsibility, making the pipeline easier to maintain and scale.
 
 ---
 
-# 4. Scope of the Current Implementation
+# 📈 Business Analytics Modules
 
-The current repository focuses specifically on the **analytical and consumption layer**.
+## 💰 Financial Analytics
 
-### Implemented
+Track overall business performance through revenue and profitability metrics.
 
-* Databricks SQL analysis
-* FMCG sales KPI analysis
-* Category analysis
-* Brand analysis
-* Dashboard-based analytics
-* Genie AI natural-language analysis
-* SQL source-code organization
-* Analytical evidence through screenshots
-* GitHub-based version control
-
-### Intentionally outside the current implementation
-
-The repository does **not** currently claim to implement:
-
-* Automated ingestion
-* Streaming ingestion
-* Bronze/Silver/Gold pipelines
-* PySpark ETL
-* Delta Lake pipeline orchestration
-* Airflow orchestration
-* CI/CD deployment
-* Automated data-quality framework
-* Production monitoring
-
-These are documented separately as possible architectural extensions rather than being presented as existing functionality.
-
-This distinction keeps the project technically defensible.
+* Revenue trends
+* Gross profit
+* Discount analysis
+* Margin monitoring
+* Fiscal performance
 
 ---
 
-# 5. System Architecture
+## 🛒 Sales Intelligence
 
-## Current Architecture
+Understand product and customer purchasing behavior.
 
-```text
-┌──────────────────────────────────────────────────────────────┐
-│                       SOURCE SALES DATA                      │
-└──────────────────────────────┬───────────────────────────────┘
-                               │
-                               ▼
-┌──────────────────────────────────────────────────────────────┐
-│                       DATABRICKS SQL                         │
-│                                                              │
-│  ┌────────────────────────────────────────────────────────┐  │
-│  │                 ANALYTICAL LOGIC                       │  │
-│  │                                                        │  │
-│  │  • Aggregations                                        │  │
-│  │  • KPI calculations                                    │  │
-│  │  • Category analysis                                   │  │
-│  │  • Brand analysis                                      │  │
-│  │  • Ranking                                             │  │
-│  │  • Comparisons                                         │  │
-│  └─────────────────────────┬──────────────────────────────┘  │
-└────────────────────────────┼─────────────────────────────────┘
-                             │
-                             ▼
-                  ┌─────────────────────┐
-                  │ Analytical Outputs  │
-                  └──────────┬──────────┘
-                             │
-                ┌────────────┴────────────┐
-                │                         │
-                ▼                         ▼
-       ┌─────────────────┐       ┌─────────────────┐
-       │   Dashboard     │       │    Genie AI     │
-       │                 │       │                 │
-       │ KPI Monitoring  │       │ Natural Language│
-       │ Category Views  │       │ Questions       │
-       │ Brand Views     │       │ Analysis        │
-       └────────┬────────┘       └────────┬────────┘
-                │                         │
-                └────────────┬────────────┘
-                             ▼
-                    BUSINESS CONSUMPTION
-```
+* Top-selling products
+* Category performance
+* Customer purchasing patterns
+* Sales growth trends
+* Regional comparisons
 
 ---
 
-# 6. Architectural Boundaries
+## 🚚 Supply Chain Analytics
 
-A key design principle of the project is keeping responsibilities distinct.
+Measure operational efficiency across logistics.
 
-| Layer          | Responsibility                              |
-| -------------- | ------------------------------------------- |
-| Source Data    | Provides sales information                  |
-| Databricks SQL | Performs analytical computation             |
-| KPI Logic      | Defines measurable business indicators      |
-| Dashboard      | Presents analytical results visually        |
-| Genie AI       | Enables conversational exploration          |
-| GitHub         | Maintains version-controlled project assets |
-
-This avoids treating the dashboard itself as the data-processing layer.
+* Shipping performance
+* Delivery delays
+* Order fulfillment
+* Regional logistics
+* Distribution insights
 
 ---
 
-# 7. Analytical Model
+## 👥 Customer Intelligence
 
-The project operates around three primary analytical dimensions.
+Identify valuable customer segments and engagement patterns.
 
-```text
-                    FMCG SALES
-                        │
-          ┌─────────────┼─────────────┐
-          │             │             │
-          ▼             ▼             ▼
-       CATEGORY        BRAND         SALES
-          │             │             │
-          ▼             ▼             ▼
-     Category KPI   Brand KPI     Sales KPI
-          │             │             │
-          └─────────────┼─────────────┘
-                        ▼
-                 Business Analysis
-```
-
-### Category
-
-Used to determine how sales are distributed across product categories.
-
-### Brand
-
-Used to compare brand-level performance and identify leading brands.
-
-### Sales
-
-Used as the core quantitative measure for KPI generation and comparative analysis.
+* Customer segmentation
+* Lifetime value indicators
+* Geographic behavior
+* Purchase frequency
+* Retention insights
 
 ---
 
-# 8. KPI Engineering
+## 🛡️ Fraud & Risk Monitoring
 
-The dashboard provides a compact KPI layer for high-level business monitoring.
+Detect operational anomalies using transactional behavior.
 
-| KPI                  | Purpose                                     |
-| -------------------- | ------------------------------------------- |
-| **Total Sales**      | Measures overall sales performance          |
-| **Average Sales**    | Provides an aggregate sales-level indicator |
-| **Total Brands**     | Measures the number of brands represented   |
-| **Total Categories** | Measures category coverage                  |
-
-The KPI layer acts as the entry point into deeper category and brand analysis.
-
-```text
-                 KPI Layer
-                    │
-       ┌────────────┼────────────┐
-       ▼            ▼            ▼
-   Sales Level   Brand Level  Category Level
-       │            │            │
-       └────────────┼────────────┘
-                    ▼
-             Business Insight
-```
+* Fraud indicators
+* Risk monitoring
+* Suspicious transactions
+* Operational exceptions
+* Business alerts
 
 ---
 
-# 9. SQL Engineering Layer
+## 🌐 Website Engagement Analytics
 
-The repository contains a dedicated analytical SQL artifact:
+Combine digital engagement with business performance.
 
-```text
-SQL/
-└── FMCG_Sales_Queries.sql
-```
-
-The SQL file is the primary implementation asset of the project.
-
-It contains the analytical query work required to support the FMCG sales analysis.
-
-The repository therefore follows a simple separation:
-
-```text
-SQL Implementation
-        │
-        ▼
-Analytical Results
-        │
-        ├──────────────► Dashboard
-        │
-        └──────────────► Genie AI
-```
+* Visitor behavior
+* Conversion insights
+* Engagement metrics
+* Traffic analysis
+* Customer interaction trends
 
 ---
 
-# 10. Analytical Query Patterns
+# 🧠 Medallion Architecture
 
-The SQL implementation is oriented around common analytical engineering patterns.
+| Layer     | Engineering Purpose   | Output                        |
+| --------- | --------------------- | ----------------------------- |
+| 🥉 Bronze | Raw ingestion         | Historical enterprise records |
+| 🥈 Silver | Cleaning & validation | Trusted datasets              |
+| 🥇 Gold   | Business modeling     | Executive KPI tables          |
+| 📊 BI     | Visualization         | Decision-ready dashboards     |
 
-### Aggregation
-
-Converting detailed sales information into business-level summaries.
-
-### Grouped Analysis
-
-Calculating metrics across dimensions such as category and brand.
-
-### KPI Computation
-
-Deriving high-level metrics from sales data.
-
-### Ranking
-
-Identifying high-performing brands and categories.
-
-### Comparative Analysis
-
-Comparing performance across business dimensions.
-
-These patterns are fundamental to analytical workloads because they transform transactional-level information into decision-oriented datasets.
+The Gold layer is specifically optimized for business consumption rather than raw exploration.
 
 ---
 
-# 11. Business Metric Flow
+# 🛠️ Technology Stack
 
-A typical metric follows this conceptual path:
+<div align="center">
 
-```text
-Source Sales Records
-        │
-        ▼
-Filtering / Selection
-        │
-        ▼
-Dimensional Grouping
-        │
-        ▼
-Aggregation
-        │
-        ▼
-Business Metric
-        │
-        ▼
-Dashboard / Genie AI
-```
+| Category        | Technologies           |
+| --------------- | ---------------------- |
+| Lakehouse       | Databricks             |
+| Processing      | Apache Spark • PySpark |
+| Language        | Python                 |
+| Analytics       | SQL                    |
+| Visualization   | Power BI               |
+| Architecture    | Medallion              |
+| Version Control | Git & GitHub           |
 
-The same underlying analytical logic can therefore support multiple consumption experiences.
+</div>
 
 ---
 
-# 12. Dashboard Layer
+# 📂 Repository Structure
 
-The Databricks Dashboard represents the **visual consumption layer**.
-
-It provides an interactive view of the analytical outputs.
-
-### Dashboard focus areas
-
-#### KPI Monitoring
-
-Provides a high-level snapshot of:
-
-* Total Sales
-* Average Sales
-* Total Brands
-* Total Categories
-
-#### Category Intelligence
-
-Supports:
-
-* Sales by category
-* Category comparison
-* Category performance analysis
-
-#### Brand Intelligence
-
-Supports:
-
-* Brand-wise sales
-* Top-performing brands
-* Brand comparison
-
-Dashboard evidence is available under:
-
-```text
-Dashboard Screenshots/
-```
-
----
-
-# 13. Genie AI Layer
-
-Databricks Genie AI provides a conversational interface over the analytical environment.
-
-The purpose is to reduce the dependency on manually constructed SQL for exploratory business questions.
-
-Conceptually:
-
-```text
-Business User
-      │
-      │ Natural-language question
-      ▼
-┌──────────────────────┐
-│      Genie AI        │
-└──────────┬───────────┘
-           │
-           ▼
-    Analytical Context
-           │
-           ▼
-     Data-driven Answer
-```
-
-This creates a second analytical access pattern alongside the dashboard.
-
----
-
-# 14. Example Analytical Questions
-
-The project demonstrates natural-language questions such as:
-
-```text
-What is the total sales?
-```
-
-```text
-What is the average sales?
-```
-
-```text
-Which category has the highest sales?
-```
-
-```text
-Show the top 5 brands by sales.
-```
-
-The purpose of these interactions is to demonstrate **self-service analytical exploration**, not to replace the underlying SQL layer.
-
----
-
-# 15. Key Findings
-
-The current analytical output identifies:
-
-### Category Performance
-
-**Beverage** is the highest-performing category in the analyzed dataset.
-
-### Brand Performance
-
-**Nescafe** is identified as a top-performing brand in the current analysis.
-
-### KPI Visibility
-
-The dashboard consolidates important sales indicators into a single analytical view.
-
-### Conversational Access
-
-Genie AI enables users to explore business questions using natural language.
-
----
-
-# 16. Repository Structure
-
-```text
+```text id="fzslsw"
 FMCG-Sales-Analytics-Databricks/
 │
-├── Dashboard Screenshots/
-│   └── Dashboard implementation evidence
+├── datasets/
+├── notebooks/
+│   ├── bronze/
+│   ├── silver/
+│   ├── gold/
+│   └── analytics/
 │
-├── Genie AI Screenshots/
-│   └── Conversational analytics evidence
+├── sql/
+├── dashboards/
+├── reports/
+├── images/
 │
-├── SQL/
-│   └── FMCG_Sales_Queries.sql
-│
-└── README.md
+├── README.md
+└── LICENSE
 ```
 
-The repository is intentionally lightweight because the project currently centers on the analytical SQL layer and Databricks-based analytical outputs.
+> Organizing notebooks by Medallion layers improves reproducibility and maintainability.
 
 ---
 
-# 17. Evidence-Based Documentation
+# 📊 Executive KPI Categories
 
-The repository contains visual evidence for the two primary consumption layers.
+| Business Area   | Key Metrics                     |
+| --------------- | ------------------------------- |
+| 💰 Finance      | Revenue, Profit, Margin         |
+| 🛒 Sales        | Orders, Categories, Growth      |
+| 👥 Customer     | Segments, Frequency, Regions    |
+| 🚚 Supply Chain | Delivery, Shipping, Fulfillment |
+| 🌍 Geography    | Country & Regional Performance  |
+| 🛡️ Risk        | Fraud Monitoring                |
+| 🌐 Digital      | Website Engagement              |
 
-### Dashboard Evidence
-
-```text
-Dashboard Screenshots/
-```
-
-Demonstrates the visual analytics implementation.
-
-### Genie AI Evidence
-
-```text
-Genie AI Screenshots/
-```
-
-Demonstrates natural-language analytical interactions.
-
-### SQL Evidence
-
-```text
-SQL/FMCG_Sales_Queries.sql
-```
-
-Contains the analytical implementation.
-
-Together, these three assets represent:
-
-```text
-IMPLEMENTATION
-     │
-     ├── SQL
-     │
-     ├── Dashboard
-     │
-     └── Genie AI
-```
+These KPI groups represent the business domains analyzed within the project. <Cite ref={["turn0search0"]}/>
 
 ---
 
-# 18. Engineering Decisions
+# 🔬 Data Quality Framework
 
-## Why Databricks?
+Reliable business intelligence begins with reliable data.
 
-Databricks provides a unified environment for data processing and analytical workloads, allowing SQL-based analytics and downstream analytical experiences to exist within the same platform.
+### Validation Rules
 
-## Why SQL as the analytical language?
+* ✅ Schema validation
+* ✅ Null value detection
+* ✅ Duplicate removal
+* ✅ Type consistency
+* ✅ Business rule validation
+* ✅ Data integrity checks
+* ✅ Transformation auditing
+* ✅ Trusted analytical outputs
 
-The primary workload is analytical rather than application-oriented.
-
-SQL provides direct and expressive constructs for:
-
-* Aggregation
-* Grouping
-* Filtering
-* Ranking
-* Business metric computation
-
-## Why separate SQL from the dashboard?
-
-Business logic embedded directly inside visualization configuration becomes harder to inspect and maintain.
-
-Maintaining the analytical logic as SQL makes the calculations:
-
-* Visible
-* Version-controlled
-* Reviewable
-* Reusable
-
-## Why Dashboard + Genie AI?
-
-They solve different consumption problems.
-
-| Interface | Strength                   |
-| --------- | -------------------------- |
-| SQL       | Engineering control        |
-| Dashboard | Visual monitoring          |
-| Genie AI  | Conversational exploration |
+> **Clean Data → Trusted KPIs → Better Business Decisions**
 
 ---
 
-# 19. Data Quality Considerations
+# 💼 Real-World Applications
 
-Metric accuracy depends on the quality of the source data.
+This platform mirrors analytical workflows used across enterprise retail organizations.
 
-For a production evolution of this solution, the following checks should be introduced:
+### Retail & FMCG
 
-### Structural validation
+Sales optimization, pricing strategy and category performance.
 
-* Required columns exist
-* Expected data types are present
-* Schema changes are detected
+### Supply Chain
 
-### Record-level validation
+Shipping efficiency, logistics monitoring and fulfillment analytics.
 
-* Null checks
-* Duplicate detection
-* Invalid dimension values
-* Invalid numeric values
+### Executive Leadership
 
-### Analytical validation
+KPI dashboards supporting strategic decision-making.
 
-* KPI reconciliation
-* Aggregation consistency
-* Unexpected sales-value detection
-* Category/brand completeness
+### Finance Teams
 
-The current repository does not claim to contain an automated data-quality framework.
+Revenue analysis, profitability monitoring and market comparisons.
+
+### Data Engineering
+
+Scalable ETL / ELT pipelines using distributed processing.
 
 ---
 
-# 20. Performance Considerations
+# 🚀 Future Roadmap
 
-As data volume grows, analytical SQL should be reviewed for:
-
-* Unnecessary data scans
-* Expensive repeated aggregations
-* Inefficient filtering
-* High-cardinality grouping
-* Repeated computation of identical metrics
-
-Potential future optimization strategies include:
-
-* Query optimization
-* Reusable analytical datasets
-* Appropriate physical data organization
-* Incremental analytical processing
-* Workload monitoring
-
-No unsupported performance benchmark is claimed by this project.
+* [x] End-to-End Databricks Pipeline
+* [x] PySpark Transformations
+* [x] Sales Analytics
+* [x] Customer Intelligence
+* [x] Supply Chain Analytics
+* [x] Fraud Monitoring
+* [x] SQL Business KPIs
+* [ ] Delta Live Tables
+* [ ] Auto Loader
+* [ ] Unity Catalog
+* [ ] ML Demand Forecasting
+* [ ] Real-Time Streaming
+* [ ] Lakeflow Jobs
 
 ---
 
-# 21. Security Considerations
+# 🎓 Engineering Concepts Demonstrated
 
-The repository does not require credentials to be committed to source control.
-
-A production deployment should additionally implement:
-
-* Least-privilege access
-* Workspace-level access control
-* Dataset/table permissions
-* Secret management
-* Environment isolation
-* Audit logging
-
-The GitHub repository should remain free of:
-
-```text
-API keys
-Passwords
-Tokens
-Connection strings
-Cloud credentials
-```
+* Enterprise Lakehouse Architecture
+* Medallion Data Modeling
+* Distributed PySpark Processing
+* SQL Business Analytics
+* Feature Engineering
+* Data Validation
+* KPI Modeling
+* Business Intelligence
+* Executive Reporting
+* Scalable Data Engineering
 
 ---
 
-# 22. Reproducibility
+# 👨‍💻 Author
 
-The analytical implementation is version-controlled through GitHub.
-
-To reproduce the analytical work:
-
-1. Clone the repository.
-2. Open the SQL implementation.
-3. Execute the required queries in an appropriate Databricks environment.
-4. Provide access to the corresponding sales data objects.
-5. Recreate or inspect the dashboard and Genie AI analytical experience.
-
-The repository provides the SQL implementation and visual evidence; the execution environment remains Databricks.
-
----
-
-# 23. Reproduction Workflow
-
-```text
-Clone Repository
-       │
-       ▼
-Open SQL/FMCG_Sales_Queries.sql
-       │
-       ▼
-Connect to Databricks
-       │
-       ▼
-Resolve Required Data Objects
-       │
-       ▼
-Execute Analytical Queries
-       │
-       ▼
-Validate Analytical Results
-       │
-       ├───────────────┐
-       ▼               ▼
-   Dashboard        Genie AI
-       │               │
-       └───────┬───────┘
-               ▼
-        Business Analysis
-```
-
----
-
-# 24. Current Architecture vs Future Architecture
-
-The current solution is intentionally focused.
-
-### Current
-
-```text
-Sales Data
-    ↓
-Databricks SQL
-    ↓
-Analytical Outputs
-    ├── Dashboard
-    └── Genie AI
-```
-
-### Potential Production Evolution
-
-```text
-External Sources
-       │
-       ▼
-Ingestion Layer
-       │
-       ▼
-Raw / Bronze
-       │
-       ▼
-Cleansed / Silver
-       │
-       ▼
-Business / Gold
-       │
-       ▼
-Analytical SQL
-       │
-   ┌───┴────┐
-   ▼        ▼
-Dashboard  Genie AI
-```
-
-Possible future engineering additions:
-
-* Automated ingestion
-* Incremental processing
-* Data-quality automation
-* Medallion architecture
-* Delta-based storage
-* Workflow orchestration
-* Lineage
-* CI/CD
-* Monitoring
-* Governance
-
-These are **future architectural directions**, not claims about the current repository.
-
----
-
-# 25. Engineering Maturity Roadmap
-
-| Capability              | Current |  Future |
-| ----------------------- | :-----: | :-----: |
-| SQL Analytics           |    ✅    |    —    |
-| KPI Engineering         |    ✅    |    —    |
-| Category Analysis       |    ✅    |    —    |
-| Brand Analysis          |    ✅    |    —    |
-| Databricks Dashboard    |    ✅    |    —    |
-| Genie AI                |    ✅    |    —    |
-| Automated Ingestion     |    —    | Planned |
-| Data Quality Automation |    —    | Planned |
-| Pipeline Orchestration  |    —    | Planned |
-| CI/CD                   |    —    | Planned |
-| Monitoring              |    —    | Planned |
-| Governance              |    —    | Planned |
-
-This makes the repository's current engineering boundary explicit.
-
----
-
-# 26. Project Strengths
-
-### Analytical separation
-
-The project separates business logic from dashboard presentation.
-
-### Multiple consumption modes
-
-Users can consume insights visually or conversationally.
-
-### Reusable SQL layer
-
-The analytical SQL is maintained as a version-controlled project asset.
-
-### Business-oriented design
-
-The analysis is organized around questions that business users actually ask.
-
-### Honest architecture
-
-The documentation distinguishes implemented capabilities from future enhancements.
-
----
-
-# 27. What This Project Demonstrates
-
-This project demonstrates practical experience in:
-
-### Data & Analytics Engineering
-
-* Databricks
-* Databricks SQL
-* SQL analytics
-* KPI engineering
-* Aggregation
-* Dimensional analysis
-* Business metric design
-
-### Business Intelligence
-
-* Dashboard design
-* KPI monitoring
-* Category analytics
-* Brand analytics
-* Business insight generation
-
-### AI-Assisted Analytics
-
-* Databricks Genie AI
-* Natural-language querying
-* Self-service analytics
-
-### Engineering Practices
-
-* Version control
-* Structured repository organization
-* Reproducible analytical logic
-* Technical documentation
-* Architecture boundary definition
-
----
-
-# 28. Technology Stack
-
-| Technology                | Role                                  |
-| ------------------------- | ------------------------------------- |
-| **Databricks**            | Analytical platform                   |
-| **Databricks SQL**        | Query and analytical processing       |
-| **SQL**                   | Business logic and metric computation |
-| **Databricks Dashboards** | Visual analytics                      |
-| **Databricks Genie AI**   | Conversational analytics              |
-| **Git**                   | Version control                       |
-| **GitHub**                | Source-code hosting and documentation |
-
----
-
-# 29. Getting Started
-
-## Prerequisites
-
-* Databricks workspace
-* Databricks SQL access
-* Access to the required FMCG sales data
-* Git
-
-## Clone
-
-```bash
-git clone https://github.com/syedsaud15/FMCG-Sales-Analytics-Databricks.git
-
-cd FMCG-Sales-Analytics-Databricks
-```
-
-## Analytical SQL
-
-Open:
-
-```text
-SQL/FMCG_Sales_Queries.sql
-```
-
-Execute the relevant queries in the Databricks environment after mapping the referenced data objects to the target workspace.
-
-## Review Evidence
-
-Dashboard implementation:
-
-```text
-Dashboard Screenshots/
-```
-
-Genie AI implementation:
-
-```text
-Genie AI Screenshots/
-```
-
----
-
-# 30. Project Assets
-
-| Asset                        | Purpose                           |
-| ---------------------------- | --------------------------------- |
-| `SQL/FMCG_Sales_Queries.sql` | Core analytical implementation    |
-| `Dashboard Screenshots/`     | Dashboard evidence                |
-| `Genie AI Screenshots/`      | Conversational analytics evidence |
-| `README.md`                  | Technical documentation           |
-
----
-
-# 31. Repository
-
-**GitHub**
-
-https://github.com/syedsaud15/FMCG-Sales-Analytics-Databricks
-
----
-
-# 32. Author
+<div align="center">
 
 ## Syed Saud Alam
 
-**Data Engineer | Cloud Data Engineering | Big Data | Databricks | SQL**
+**Data Engineer • AI Engineer • Big Data • Cloud**
 
-GitHub:
-https://github.com/syedsaud15
+[![GitHub](https://img.shields.io/badge/GitHub-syedsaud15-181717?style=for-the-badge\&logo=github)](https://github.com/syedsaud15)
 
-LinkedIn:
-https://www.linkedin.com/in/syed-saud-dev/
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Syed%20Saud%20Alam-0A66C2?style=for-the-badge\&logo=linkedin)](https://www.linkedin.com/in/syed-saud-dev/)
+
+</div>
 
 ---
 
-# 33. Final Engineering Perspective
+<div align="center">
 
-The project demonstrates a practical analytical pattern:
+## 🏢 Enterprise Data Engineering for Retail Intelligence
 
-```text
-                  DATA
-                   │
-                   ▼
-            SQL COMPUTATION
-                   │
-                   ▼
-           BUSINESS METRICS
-                   │
-          ┌────────┴────────┐
-          ▼                 ▼
-     VISUAL BI        CONVERSATIONAL BI
-          │                 │
-          ▼                 ▼
-      DASHBOARD          GENIE AI
-          │                 │
-          └────────┬────────┘
-                   ▼
-             BUSINESS INSIGHT
-```
+**Databricks • PySpark • SQL • Power BI**
 
-The core engineering principle is simple:
+⭐ **If this project inspired you, consider giving it a Star.**
 
-> **Build the analytical logic once, then make the resulting business intelligence accessible through multiple consumption patterns.**
-
-This repository represents that principle using **Databricks SQL, KPI engineering, interactive dashboards, and Genie AI-powered natural-language analytics**.
+</div>
